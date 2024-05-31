@@ -1,0 +1,16 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/GeneralReport/export",
+      "UpstreamPathTemplate": "/api/report/GeneralReport/export",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7106
+        }
+      ]
+    }
+  ]
+}

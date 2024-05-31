@@ -1,0 +1,36 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/product/items-paging",
+      "UpstreamPathTemplate": "/api/catalog/product/items-paging",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "https",
+      "RouteClaimsRequirement": {
+        "Module": "Admin",
+        "Permission": "Write"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7097
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/product/item/{id}",
+      "UpstreamPathTemplate": "/api/product/item/{id}",
+      "UpstreamHttpMethod": [ "https" ],
+      "DownstreamScheme": "http",
+      "RouteClaimsRequirement": {
+        "Module": "EMPLOYEE",
+        "Permission": "HAHAHAH"
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7097
+        }
+      ]
+    }
+  ]
+}
